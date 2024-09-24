@@ -1,0 +1,23 @@
+:root {
+  --planeColor: #fff;
+  --planeSize: 385px;
+}
+
+.plane {
+  fill: var(--planeColor);
+  width: var(--planeSize);
+  height: var(--planeSize);
+  transform: rotate(-45deg);
+}
+
+.planeContainer {
+  width: var(--planeSize);
+  height: var(--planeSize);
+  will-change: transform;
+}
+
+.planeWrapper {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}

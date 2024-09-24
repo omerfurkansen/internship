@@ -1,0 +1,47 @@
+:root {
+  --batteryColor: #fff;
+  --batterySize: 280px;
+}
+
+.battery {
+  fill: var(--batteryColor);
+  width: var(--batterySize);
+  height: var(--batterySize);
+}
+
+.batteryContainer {
+  width: var(--batterySize);
+  height: var(--batterySize);
+}
+
+.batteryWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.batteryLevelLabel {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--batteryColor);
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,46 @@
+:root {
+  --speedometerColor: #fff;
+  --speedometerSize: 385px;
+}
+
+.speedometerContainer {
+  width: var(--speedometerSize);
+  height: var(--speedometerSize);
+  will-change: transform;
+}
+
+.speedometerWrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.speedometerCircle {
+  fill: var(--speedometerColor);
+  width: var(--speedometerSize);
+  height: var(--speedometerSize);
+  position: absolute;
+}
+
+.speedometerNeedle {
+  fill: var(--speedometerColor);
+  width: calc(var(--speedometerSize) / 2.8);
+  height: calc(var(--speedometerSize) / 2.8);
+  position: absolute;
+  bottom: calc(var(--speedometerSize) / 2.2);
+  left: calc(var(--speedometerSize) / 3.1);
+  transform-origin: bottom;
+}
+
+.speedometerLabel {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--speedometerColor);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  width: 60px;
+  text-align: center;
+}
