@@ -1,0 +1,56 @@
+{
+  "name": "@jotforminc/query-builder",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "browserslist": [
+    "extends @jotforminc/browserslist-config"
+  ],
+  "dependencies": {
+    "@jotforminc/header-components": "workspace:*",
+    "@jotforminc/jotform.css": "2.2.7",
+    "@jotforminc/magnet": "workspace:*",
+    "@jotforminc/router-bridge": "workspace:*",
+    "@jotforminc/svg-icons": "workspace:*",
+    "@swc/helpers": "0.5.11",
+    "apexcharts": "3.52.0",
+    "core-js": "3.22.2",
+    "highcharts": "9.0.0",
+    "highcharts-react-official": "3.0.0",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-apexcharts": "1.4.1",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.6",
+    "react-router-dom": "5.3.4",
+    "redux": "4.1.2",
+    "regenerator-runtime": "0.13.9"
+  },
+  "devDependencies": {
+    "@jotforminc/browserslist-config": "workspace:*",
+    "@jotforminc/eslint-config-react": "workspace:*",
+    "@jotforminc/jest-preset-base": "workspace:*",
+    "@jotforminc/jest-preset-e2e": "workspace:*",
+    "@jotforminc/jest-preset-react": "workspace:*",
+    "@jotforminc/stylelint-config": "workspace:*",
+    "@jotforminc/webpack-config-app": "workspace:*",
+    "@testing-library/jest-dom": "5.12.0",
+    "@testing-library/react": "11.1.0",
+    "deepmerge": "4.3.1",
+    "eslint": "8.56.0",
+    "jest": "29.6.4",
+    "stylelint": "14.5.1",
+    "webpack": "5.91.0",
+    "webpack-cli": "5.1.4"
+  },
+  "scripts": {
+    "build": "pnpm build:app",
+    "build:app": "webpack --config webpack.prod.config.js",
+    "start": "pnpm start:app",
+    "start:app": "webpack serve --config webpack.dev.config.js",
+    "clean": "rm -rf build",
+    "lint:js": "eslint src --quiet",
+    "lint:style": "stylelint src/**/*.css src/**/*.scss",
+    "test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*.{js,jsx,ts,tsx}\" --coverageDirectory=\"coverageReport\" --coverageReporters=\"json-summary\" --all --passWithNoTests | true"
+  }
+}
